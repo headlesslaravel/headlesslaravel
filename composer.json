@@ -15,6 +15,6 @@
         "headlesslaravel/cards": "*",
         "headlesslaravel/metrics": "*",
         "headlesslaravel/imports": "*",
-        "headlesslaravel/exports": "*",
+        "headlesslaravel/exports": "*"
     }
 }
