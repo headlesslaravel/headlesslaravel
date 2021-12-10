@@ -13,8 +13,6 @@
         "headlesslaravel/formations": "*",
         "headlesslaravel/notifications": "*",
         "headlesslaravel/cards": "*",
-        "headlesslaravel/metrics": "*",
-        "headlesslaravel/imports": "*",
-        "headlesslaravel/exports": "*"
+        "headlesslaravel/metrics": "*"
     }
 }
