@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Http\Cards;
+
+use App\Models\User;
+use HeadlessLaravel\Cards\Card;
+use HeadlessLaravel\Cards\CardGroup;
+
+class {{ class }} extends CardGroup
+{
+    public function rules(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    public function cards()
+    {
+        Card::make('Total Users')
+            ->value(function () {
+                return User::count();
+            });
+    }
+}

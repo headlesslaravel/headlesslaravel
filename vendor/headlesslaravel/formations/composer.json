@@ -1,0 +1,33 @@
+{
+    "name": "headlesslaravel/formations",
+    "description": "Laravel index filters & validation",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brian Dillingham",
+            "email": "brian@dillingham.dev"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "HeadlessLaravel\\Formations\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HeadlessLaravel\\Formations\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HeadlessLaravel\\Formations\\FormationProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.17",
+        "inertiajs/inertia-laravel": "^0.4.5"
+    }
+}

@@ -1,0 +1,77 @@
+<?php
+
+namespace {{ namespace }};
+
+use HeadlessLaravel\Formations\Filter;
+use HeadlessLaravel\Formations\Formation;
+
+class {{ class }} extends Formation
+{
+    /**
+     * The model class.
+     *
+     * @var string
+     */
+    public $model = \App\Models\Model::class;
+
+    /**
+     * The display column for options.
+     *
+     * @var string
+     */
+    public $display = 'id';
+
+    /**
+     * The searchable columns.
+     *
+     * @var array
+     */
+    public $search = [];
+
+    /**
+     * The sortable columns.
+     *
+     * @var array
+     */
+    public $sort = ['created_at'];
+
+    /**
+     * Define the query.
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scope(Builder $query)
+    {
+        return $query;
+    }
+
+    /**
+     * Define the filters.
+     *
+     * @return array
+     */
+    public function filters()
+    {
+        return [
+            Filter::make('created_at')->dateRange(),
+            Filter::make('with-deleted')->withTrashed(),
+            Filter::make('only-deleted')->onlyTrashed(),
+            //
+        ];
+    }
+
+    /**
+     * Define the actions.
+     *
+     * @return array
+     */
+    public function actions()
+    {
+        return [
+            Action::make('delete')->job(Delete::class),
+            Action::make('restore')->job(Restore::class),
+            Action::make('force-delete')->job(ForceDelete::class),
+            //
+        ];
+    }
+}
