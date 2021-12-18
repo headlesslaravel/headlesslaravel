@@ -80,16 +80,16 @@
         },
         {
             "name": "headlesslaravel/formations",
-            "version": "0.0.3",
+            "version": "0.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/headlesslaravel/formations.git",
-                "reference": "eeafca2eda17bfd3f0897fd46e61ae8b15ad91a1"
+                "reference": "33e610c7e33758ebcb698f0f659e13e0f29c0d4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/headlesslaravel/formations/zipball/eeafca2eda17bfd3f0897fd46e61ae8b15ad91a1",
-                "reference": "eeafca2eda17bfd3f0897fd46e61ae8b15ad91a1",
+                "url": "https://api.github.com/repos/headlesslaravel/formations/zipball/33e610c7e33758ebcb698f0f659e13e0f29c0d4f",
+                "reference": "33e610c7e33758ebcb698f0f659e13e0f29c0d4f",
                 "shasum": ""
             },
             "require-dev": {
@@ -122,9 +122,9 @@
             "description": "Laravel index filters & validation",
             "support": {
                 "issues": "https://github.com/headlesslaravel/formations/issues",
-                "source": "https://github.com/headlesslaravel/formations/tree/0.0.3"
+                "source": "https://github.com/headlesslaravel/formations/tree/0.0.4"
             },
-            "time": "2021-12-17T04:43:43+00:00"
+            "time": "2021-12-17T17:29:25+00:00"
         },
         {
             "name": "headlesslaravel/metrics",
