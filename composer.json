@@ -14,5 +14,17 @@
         "headlesslaravel/notifications": "*",
         "headlesslaravel/cards": "*",
         "headlesslaravel/metrics": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "HeadlessLaravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HeadlessLaravel\\PackageServiceProvider"
+            ]
+        }
     }
 }
