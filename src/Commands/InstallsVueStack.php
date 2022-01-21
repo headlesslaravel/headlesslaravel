@@ -15,7 +15,7 @@ trait InstallsVueStack
         // NPM Packages...
         $this->updateNodePackages(function ($packages) {
             return [
-                    '@craniums/vue' => '^0.0.10',
+                    '@craniums/vue' => '^0.0.11',
                 ] + $packages;
         });
 
