@@ -15,8 +15,8 @@ trait InstallsVueStack
         // NPM Packages...
         $this->updateNodePackages(function ($packages) {
             return [
-                    '@craniums/vue' => '^0.0.11',
-                ] + $packages;
+                '@craniums/vue' => '^0.0.10',
+            ] + $packages;
         });
 
         // Update resources/js/app.js
@@ -36,8 +36,8 @@ trait InstallsVueStack
         $importCranium = "import Cranium from '@craniums/vue';";
         $this->addLineAfter($addImportAfter, $importCranium, resource_path('js/app.js'));
 
-        $addUseAfter = ".use(plugin)";
-        $useCranium = "            .use(Cranium)";
+        $addUseAfter = '.use(plugin)';
+        $useCranium = '            .use(Cranium)';
         $this->addLineAfter($addUseAfter, $useCranium, resource_path('js/app.js'));
     }
 

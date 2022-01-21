@@ -59,7 +59,8 @@ class InstallCommand extends Command
     /**
      * Installs the given Composer Packages into the application.
      *
-     * @param  mixed  $packages
+     * @param mixed $packages
+     *
      * @return void
      */
     protected function requireComposerPackages($packages)
@@ -79,13 +80,14 @@ class InstallCommand extends Command
     /**
      * Update the "package.json" file.
      *
-     * @param  callable  $callback
-     * @param  bool  $dev
+     * @param callable $callback
+     * @param bool     $dev
+     *
      * @return void
      */
     protected static function updateNodePackages(callable $callback, $dev = true)
     {
-        if (! file_exists(base_path('package.json'))) {
+        if (!file_exists(base_path('package.json'))) {
             return;
         }
 
@@ -109,9 +111,10 @@ class InstallCommand extends Command
     /**
      * Add a given string within a given file after specific string.
      *
-     * @param  string  $addAfter
-     * @param  string  $string
-     * @param  string  $path
+     * @param string $addAfter
+     * @param string $string
+     * @param string $path
+     *
      * @return void
      */
     protected function addLineAfter($addAfter, $string, $path)
