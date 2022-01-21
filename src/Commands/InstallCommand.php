@@ -40,6 +40,11 @@ class InstallCommand extends Command
         return 0;
     }
 
+    /**
+     * Run a Breeze Install Command.
+     *
+     * @return void
+     */
     public function runBreezeInstall()
     {
         $command = ['php', 'artisan', 'breeze:install', 'vue'];
@@ -102,7 +107,7 @@ class InstallCommand extends Command
     }
 
     /**
-     * Replace a given string within a given file.
+     * Add a given string within a given file after specific string.
      *
      * @param  string  $addAfter
      * @param  string  $string
@@ -118,7 +123,7 @@ class InstallCommand extends Command
     }
 
     /**
-     * Run npm run prod
+     * Run npm run prod.
      *
      * @return void
      */
@@ -134,7 +139,7 @@ class InstallCommand extends Command
     }
 
     /**
-     * Run npm install
+     * Run npm install.
      *
      * @return void
      */

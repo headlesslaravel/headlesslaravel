@@ -19,8 +19,13 @@ trait InstallsVueStack
                 ] + $packages;
         });
 
+        // Update resources/js/app.js
         $this->updateAppJs();
+
+        // Update tailwind.config.js
         $this->updateTailwindConfig();
+
+        // run NPM Install and NPM PROD
         $this->runNPMInstall();
         $this->runNPMProd();
     }
