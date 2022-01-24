@@ -1,7 +1,14 @@
 <template>
     <Layout>
         <template #header>
-            Dashboard
+            <Heading>
+                <template #title>
+                    Dashboard
+                </template>
+                <template #aside>
+                    <RelativeDates />
+                </template>
+            </Heading>
         </template>
         <template #content>
             <Cards key="dashboard" class="p-5" />
@@ -11,15 +18,13 @@
 
 <script>
 import Layout from '@/Layouts/Sidebar'
-import { Head } from '@inertiajs/inertia-vue3';
-import { Cards } from "@craniums/vue";
-import RelativeDates from "@craniums/vue/src/Elements/RelativeDates";
+import { Heading, Cards, RelativeDates } from "@craniums/vue";
 
 export default {
     components: {
-        RelativeDates,
         Layout,
-        Head,
+        Heading,
+        RelativeDates,
         Cards,
     },
 }
