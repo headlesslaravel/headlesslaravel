@@ -13,7 +13,8 @@
         "headlesslaravel/formations": "*",
         "headlesslaravel/notifications": "*",
         "headlesslaravel/cards": "*",
-        "headlesslaravel/metrics": "*"
+        "headlesslaravel/metrics": "*",
+        "illuminate/console": "*"
     },
     "autoload": {
         "psr-4": {

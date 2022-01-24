@@ -9,7 +9,7 @@
             <Table
                 :fields="fields"
                 :values="values"
-            //>
+            />
         </template>
     </Layout>
 </template>
