@@ -1,21 +1,24 @@
 <template>
     <Layout>
-        <template #content>
+        <template #header>
             <Topper/>
+        </template>
+        <template #content>
             <Finder
                 :filters="filters"
-                :sort="sort"
             />
             <Table
+                :click="routes.show"
                 :fields="fields"
+                :sort="sort"
                 :values="values"
-            //>
+            />
         </template>
     </Layout>
 </template>
 
 <script>
-import Layout from "@/Layouts/Authenticated";
+import Layout from "@/Layouts/Sidebar";
 import { Topper, Finder, Table, Headless } from "@craniums/vue";
 
 export default {
