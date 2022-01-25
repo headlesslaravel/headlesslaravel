@@ -1,7 +1,7 @@
 # Headless Laravel
 
 ```
-composer require headlesslaravel/packages
+composer require headlesslaravel/headlesslaravel
 ```
 ```
 php artisan headless:install
