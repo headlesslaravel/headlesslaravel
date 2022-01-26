@@ -39,7 +39,7 @@ class Headless
             /** @var Formation $formation */
             $formation = app($formationName);
             Route::formation($formationName)
-                ->resource((string)$formation->guessResourceName());
+                ->resource((string) $formation->guessResourceName());
         }
     }
 

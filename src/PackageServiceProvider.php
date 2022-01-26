@@ -25,7 +25,7 @@ class PackageServiceProvider extends ServiceProvider
             return new Headless();
         });
 
-        $this->mergeConfigFrom(__DIR__ . '/../config/headless-laravel.php', 'headless-laravel');
+        $this->mergeConfigFrom(__DIR__.'/../config/headless-laravel.php', 'headless-laravel');
     }
 
     /**
