@@ -3,7 +3,6 @@
 namespace HeadlessLaravel;
 
 use Composer\Autoload\ClassMapGenerator;
-use HeadlessLaravel\Formations\Formation;
 use Illuminate\Support\Facades\Route;
 
 class Manager
@@ -22,7 +21,7 @@ class Manager
 
         $formationsPath = config('headless-laravel.search');
 
-        if(is_array($formationsPath)) {
+        if (is_array($formationsPath)) {
             return $formationsPath;
         }
 
@@ -32,8 +31,8 @@ class Manager
 
         $classes = $this->getClasses($formationsPath);
 
-        foreach($classes as $class) {
-            if(app($class)->globalSearch !== false) {
+        foreach ($classes as $class) {
+            if (app($class)->globalSearch !== false) {
                 $this->searchable[] = $class;
             }
         }
@@ -61,13 +60,12 @@ class Manager
     public function routeFormations()
     {
         foreach ($this->formations() as $class) {
-
             $formation = app($class);
 
             Route::formation($class)
                 ->resource((string) $formation->guessResourceName());
 
-            if(count($formation->import())) {
+            if (count($formation->import())) {
                 Route::formation($class)
                     ->resource((string) $formation->guessResourceName())
                     ->asImport();
@@ -108,7 +106,7 @@ class Manager
     {
         $searchable = $this->searchable();
 
-        if(count($searchable)) {
+        if (count($searchable)) {
             Route::seeker($searchable);
         }
     }
