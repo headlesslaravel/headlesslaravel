@@ -3,8 +3,6 @@
 namespace HeadlessLaravel;
 
 use Composer\Autoload\ClassMapGenerator;
-use HeadlessLaravel\Cards\Card;
-use HeadlessLaravel\Cards\Cards;
 use HeadlessLaravel\Formations\Formation;
 use Illuminate\Support\Facades\Route;
 
@@ -65,10 +63,7 @@ class Headless
         $cards = $this->cards();
 
         foreach ($cards as $cardName) {
-            /** @var Cards $cardGroup */
-            $cardGroup = app($cardName);
-            /** @var Card $card */
-            Route::cards($cardGroup->guessEndpointName(), $cardName);
+            Route::cards($cardName);
         }
     }
 
@@ -92,7 +87,7 @@ class Headless
         return $classes;
     }
 
-    public function create()
+    public function route()
     {
         $this->routeFormations();
         $this->routeCards();

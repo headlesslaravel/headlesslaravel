@@ -40,7 +40,7 @@ class PackageServiceProvider extends ServiceProvider
         ], 'craniums-vue');
 
         Route::macro('headless', function () {
-            return app(Headless::class)->create();
+            return app(Headless::class)->route();
         });
     }
 }
