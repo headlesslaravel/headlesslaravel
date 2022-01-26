@@ -4,7 +4,7 @@ namespace HeadlessLaravel;
 
 use Composer\Autoload\ClassMapGenerator;
 use HeadlessLaravel\Cards\Card;
-use HeadlessLaravel\Cards\CardGroup;
+use HeadlessLaravel\Cards\Cards;
 use HeadlessLaravel\Formations\Formation;
 use Illuminate\Support\Facades\Route;
 
@@ -65,7 +65,7 @@ class Headless
         $cards = $this->cards();
 
         foreach ($cards as $cardName) {
-            /** @var CardGroup $cardGroup */
+            /** @var Cards $cardGroup */
             $cardGroup = app($cardName);
             /** @var Card $card */
             Route::cards($cardGroup->guessEndpointName(), $cardName);
@@ -94,8 +94,8 @@ class Headless
 
     public function create()
     {
-        $this->formations();
-        $this->cards();
+        $this->routeFormations();
+        $this->routeCards();
         if (Route::hasMacro('notifications')) {
             $this->routeNotifications();
         }
