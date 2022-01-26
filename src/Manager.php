@@ -3,7 +3,6 @@
 namespace HeadlessLaravel;
 
 use Composer\Autoload\ClassMapGenerator;
-use HeadlessLaravel\Formations\Formation;
 use Illuminate\Support\Facades\Route;
 
 class Manager
@@ -32,13 +31,12 @@ class Manager
     public function routeFormations()
     {
         foreach ($this->formations() as $class) {
-
             $formation = app($class);
 
             Route::formation($class)
                 ->resource((string) $formation->guessResourceName());
 
-            if(count($formation->import())) {
+            if (count($formation->import())) {
                 Route::formation($class)
                     ->resource((string) $formation->guessResourceName())
                     ->asImport();
