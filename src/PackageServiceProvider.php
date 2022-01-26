@@ -21,8 +21,8 @@ class PackageServiceProvider extends ServiceProvider
             ]);
         }
 
-        $this->app->singleton(Headless::class, function () {
-            return new Headless();
+        $this->app->singleton(Manager::class, function () {
+            return new Manager();
         });
 
         $this->mergeConfigFrom(__DIR__.'/../config/headless-laravel.php', 'headless-laravel');
@@ -40,7 +40,7 @@ class PackageServiceProvider extends ServiceProvider
         ], 'craniums-vue');
 
         Route::macro('headless', function () {
-            return app(Headless::class)->route();
+            return app(Manager::class)->route();
         });
     }
 }
