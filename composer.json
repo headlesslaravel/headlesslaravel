@@ -1,5 +1,5 @@
 {
-    "name": "headlesslaravel/packages",
+    "name": "headlesslaravel/headlesslaravel",
     "description": "Install Headless Laravel packages",
     "type": "library",
     "license": "MIT",
