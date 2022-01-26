@@ -32,7 +32,7 @@ class Manager
     public function routeFormations()
     {
         foreach ($this->formations() as $class) {
-            /** @var Formation $formation */
+
             $formation = app($class);
 
             Route::formation($class)
