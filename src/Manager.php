@@ -7,9 +7,38 @@ use Illuminate\Support\Facades\Route;
 
 class Manager
 {
+    public $searchable = [];
+
     public $formations = [];
 
     public $cards = [];
+
+    public function searchable(): array
+    {
+        if (count($this->searchable)) {
+            return $this->searchable;
+        }
+
+        $formationsPath = config('headless-laravel.search');
+
+        if (is_array($formationsPath)) {
+            return $formationsPath;
+        }
+
+        if (!file_exists($formationsPath)) {
+            return [];
+        }
+
+        $classes = $this->getClasses($formationsPath);
+
+        foreach ($classes as $class) {
+            if (app($class)->globalSearch !== false) {
+                $this->searchable[] = $class;
+            }
+        }
+
+        return $this->searchable;
+    }
 
     public function formations(): array
     {
@@ -73,6 +102,15 @@ class Manager
         Route::notifications();
     }
 
+    public function routeSearchable()
+    {
+        $searchable = $this->searchable();
+
+        if (count($searchable)) {
+            Route::seeker($searchable);
+        }
+    }
+
     private function getClasses($dirPath): array
     {
         $classMap = ClassMapGenerator::createMap($dirPath);
@@ -92,6 +130,8 @@ class Manager
     public function route()
     {
         $this->routeFormations();
+
+        $this->routeSearchable();
 
         $this->routeCards();
 

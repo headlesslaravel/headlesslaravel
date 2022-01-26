@@ -4,6 +4,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Global search
+    |--------------------------------------------------------------------------
+    |
+    | When using Route::headless(), the following path is used to locate
+    | formations to pass to Route::seeker() to enable global search.
+    | This config option can also be an array of formation.
+    |
+    */
+    'search' => app_path('Http/Formations'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Headless class paths
     |--------------------------------------------------------------------------
     |
