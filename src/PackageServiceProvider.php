@@ -3,6 +3,7 @@
 namespace HeadlessLaravel;
 
 use HeadlessLaravel\Commands\InstallCommand;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class PackageServiceProvider extends ServiceProvider
@@ -19,6 +20,12 @@ class PackageServiceProvider extends ServiceProvider
                 InstallCommand::class,
             ]);
         }
+
+        $this->app->singleton(Headless::class, function () {
+            return new Headless();
+        });
+
+        $this->mergeConfigFrom(__DIR__.'/../config/headless-laravel.php', 'headless-laravel');
     }
 
     /**
@@ -31,5 +38,9 @@ class PackageServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../resources/js' => resource_path('js'),
         ], 'craniums-vue');
+
+        Route::macro('headless', function () {
+            return app(Headless::class)->route();
+        });
     }
 }
