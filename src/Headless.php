@@ -10,45 +10,74 @@ use Illuminate\Support\Facades\Route;
 
 class Headless
 {
-    public function formations()
+    public $formations = [];
+
+    public $cards = [];
+
+    public function formations(): array
     {
-        $formations = [];
+        if (count($this->formations)) {
+            return $this->formations;
+        }
+
         $formationsPath = config('headless-laravel.formations_path');
 
         if (!file_exists($formationsPath)) {
-            return $formations;
+            return [];
         }
 
-        $formations = $this->getClasses($formationsPath);
+        $this->formations = $this->getClasses($formationsPath);
+
+        return $this->formations;
+    }
+
+    public function routeFormations()
+    {
+        $formations = $this->formations();
 
         foreach ($formations as $formationName) {
             /** @var Formation $formation */
             $formation = app($formationName);
             Route::formation($formationName)
-                ->resource((string)$formation->guessResourceName()); // guessResourceName needs a PR to formation repo
+                ->resource((string)$formation->guessResourceName());
         }
     }
 
-    public function cards()
+    public function cards(): array
     {
-        $cards = [];
+        if (count($this->cards)) {
+            return $this->cards;
+        }
+
         $cardsPath = config('headless-laravel.cards_path');
 
         if (!file_exists($cardsPath)) {
-            return $cards;
+            return [];
         }
 
-        $cards = $this->getClasses($cardsPath);
+        $this->cards = $this->getClasses($cardsPath);
+
+        return $this->cards;
+    }
+
+    public function routeCards()
+    {
+        $cards = $this->cards();
 
         foreach ($cards as $cardName) {
             /** @var CardGroup $cardGroup */
             $cardGroup = app($cardName);
             /** @var Card $card */
-            Route::cards($cardGroup->guessEndpointName(), $cardName); // // guessEndpointName needs a PR to cards repo
+            Route::cards($cardGroup->guessEndpointName(), $cardName);
         }
     }
 
-    private function getClasses($dirPath)
+    public function routeNotifications()
+    {
+        Route::notifications();
+    }
+
+    private function getClasses($dirPath): array
     {
         $classMap = ClassMapGenerator::createMap($dirPath);
 
@@ -67,5 +96,8 @@ class Headless
     {
         $this->formations();
         $this->cards();
+        if (Route::hasMacro('notifications')) {
+            $this->routeNotifications();
+        }
     }
 }

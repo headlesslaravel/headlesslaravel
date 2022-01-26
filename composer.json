@@ -15,7 +15,6 @@
         "headlesslaravel/cards": "*",
         "headlesslaravel/metrics": "*",
         "illuminate/console": "*",
-        "illuminate/routing": "*",
         "illuminate/support": "*",
         "composer/composer": "^2.2"
     },
