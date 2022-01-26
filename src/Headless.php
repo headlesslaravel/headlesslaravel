@@ -25,7 +25,7 @@ class Headless
             /** @var Formation $formation */
             $formation = app($formationName);
             Route::formation($formationName)
-                ->resource((string)$formation->guessResourceName()); // guessResourceName needs a PR to formation repo
+                ->resource((string) $formation->guessResourceName()); // guessResourceName needs a PR to formation repo
         }
     }
 
