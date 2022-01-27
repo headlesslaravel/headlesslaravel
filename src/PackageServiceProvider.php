@@ -3,7 +3,6 @@
 namespace HeadlessLaravel;
 
 use HeadlessLaravel\Commands\InstallCommand;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class PackageServiceProvider extends ServiceProvider
