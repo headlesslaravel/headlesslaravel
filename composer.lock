@@ -871,16 +871,16 @@
         },
         {
             "name": "headlesslaravel/notifications",
-            "version": "0.0.2",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/headlesslaravel/notifications.git",
-                "reference": "a76124a611f37750d121ce6e897ba43084dc7186"
+                "reference": "0b37ed5faac021324b0b370740926a23ee0375b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/headlesslaravel/notifications/zipball/a76124a611f37750d121ce6e897ba43084dc7186",
-                "reference": "a76124a611f37750d121ce6e897ba43084dc7186",
+                "url": "https://api.github.com/repos/headlesslaravel/notifications/zipball/0b37ed5faac021324b0b370740926a23ee0375b3",
+                "reference": "0b37ed5faac021324b0b370740926a23ee0375b3",
                 "shasum": ""
             },
             "require-dev": {
@@ -912,9 +912,9 @@
             "description": "Headless Notifications for Laravel",
             "support": {
                 "issues": "https://github.com/headlesslaravel/notifications/issues",
-                "source": "https://github.com/headlesslaravel/notifications/tree/0.0.2"
+                "source": "https://github.com/headlesslaravel/notifications/tree/0.2.0"
             },
-            "time": "2021-11-30T23:28:43+00:00"
+            "time": "2022-01-25T23:03:15+00:00"
         },
         {
             "name": "illuminate/collections",

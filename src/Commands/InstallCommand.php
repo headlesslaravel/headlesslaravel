@@ -31,12 +31,33 @@ class InstallCommand extends Command
      */
     public function handle()
     {
+        $this->callSilent('vendor:publish', ['--tag' => 'headless-setup', '--force' => true]);
+
         if ($this->argument('stack') == 'vue') {
             $this->installVueStack();
             $this->callSilent('vendor:publish', ['--tag' => 'craniums-vue', '--force' => true]);
         }
 
+        $this->updateDatabaseSeeder();
+
+        $this->warn('todo: php artisan migrate:fresh --seed');
+        $this->into('user: admin@example.com pass: password');
+
         return 0;
+    }
+
+    /**
+     * Update the database seeder.
+     *
+     * @return void
+     */
+    public function updateDatabaseSeeder()
+    {
+        $this->replaceLine(
+            '// \App\Models\User::factory(10)->create();',
+            "\App\Models\User::factory()->create(['email' => 'admin@example.com']);\n\t\t\App\Models\User::factory(10)->create()",
+            database_path('seeders/DatabaseSeeder.php')
+        );
     }
 
     /**
@@ -105,6 +126,24 @@ class InstallCommand extends Command
             base_path('package.json'),
             json_encode($packages, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT).PHP_EOL
         );
+    }
+
+    /**
+     * Replace Line
+     *
+     * @param string $addAfter
+     * @param string $string
+     * @param string $path
+     *
+     * @return void
+     */
+    protected function replaceLine($search, $replace, $path)
+    {
+        $fileContents = file_get_contents($path);
+
+        $fileContents = Str::replaceFirst($search, $replace, $fileContents);
+
+        file_put_contents($path, $fileContents);
     }
 
     /**
