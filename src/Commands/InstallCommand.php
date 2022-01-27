@@ -41,7 +41,7 @@ class InstallCommand extends Command
         $this->updateDatabaseSeeder();
 
         $this->warn('todo: php artisan migrate:fresh --seed');
-        $this->into('user: admin@example.com pass: password');
+        $this->info('user: admin@example.com pass: password');
 
         return 0;
     }
