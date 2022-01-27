@@ -129,7 +129,7 @@ class InstallCommand extends Command
     }
 
     /**
-     * Replace Line
+     * Replace Line.
      *
      * @param string $addAfter
      * @param string $string
