@@ -35,11 +35,11 @@ class PackageServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../stubs/general' => app_path(),
+            __DIR__.'/../stubs/general' => base_path(),
         ], 'headless-setup');
 
         $this->publishes([
-            __DIR__.'/../stubs/vue/' => app_path(),
+            __DIR__.'/../stubs/vue/' => base_path(),
         ], 'craniums-vue');
     }
 }

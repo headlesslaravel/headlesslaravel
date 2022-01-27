@@ -55,7 +55,7 @@ class InstallCommand extends Command
     {
         $this->replaceLine(
             '// \App\Models\User::factory(10)->create();',
-            "\App\Models\User::factory()->create(['email' => 'admin@example.com']);\n\t\t\App\Models\User::factory(10)->create()",
+            "\App\Models\User::factory()->create(['email' => 'admin@example.com']);\n\t\t\App\Models\User::factory(10)->create();",
             database_path('seeders/DatabaseSeeder.php')
         );
     }
