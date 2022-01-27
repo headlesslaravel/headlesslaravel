@@ -33,9 +33,8 @@ class InstallCommand extends Command
     {
         if ($this->argument('stack') == 'vue') {
             $this->installVueStack();
+            $this->callSilent('vendor:publish', ['--tag' => 'craniums-vue', '--force' => true]);
         }
-
-        $this->call('vendor:publish', ['--tag' => 'craniums-vue', '--force' => true]);
 
         return 0;
     }
@@ -49,11 +48,11 @@ class InstallCommand extends Command
     {
         $command = ['php', 'artisan', 'breeze:install', 'vue'];
 
+        $this->info('- Running... breeze:install');
+
         (new Process($command, base_path()))
             ->setTimeout(null)
-            ->run(function ($type, $output) {
-                $this->output->write($output);
-            });
+            ->run();
     }
 
     /**
@@ -70,11 +69,11 @@ class InstallCommand extends Command
             is_array($packages) ? $packages : func_get_args()
         );
 
+        $this->info('- Running... composer require');
+
         (new Process($command, base_path(), ['COMPOSER_MEMORY_LIMIT' => '-1']))
             ->setTimeout(null)
-            ->run(function ($type, $output) {
-                $this->output->write($output);
-            });
+            ->run();
     }
 
     /**
@@ -122,6 +121,7 @@ class InstallCommand extends Command
         $fileContents = file_get_contents($path);
 
         $fileContents = Str::replaceFirst($addAfter, $addAfter.PHP_EOL.$string, $fileContents);
+
         file_put_contents($path, $fileContents);
     }
 
@@ -134,11 +134,11 @@ class InstallCommand extends Command
     {
         $command = ['npm', 'run', 'prod'];
 
+        $this->info('- Running... npm run prod');
+
         (new Process($command, base_path()))
             ->setTimeout(null)
-            ->run(function ($type, $output) {
-                $this->output->write($output);
-            });
+            ->run();
     }
 
     /**
@@ -150,10 +150,10 @@ class InstallCommand extends Command
     {
         $command = ['npm', 'install'];
 
+        $this->info('- Running... npm install');
+
         (new Process($command, base_path()))
             ->setTimeout(null)
-            ->run(function ($type, $output) {
-                $this->output->write($output);
-            });
+            ->run();
     }
 }
