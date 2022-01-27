@@ -77,13 +77,12 @@ class Manager
     public function formationRoutes()
     {
         foreach ($this->formations() as $class) {
-
             $formation = app($class);
 
             Route::formation($class)
                 ->resource((string) $formation->guessResourceName());
 
-            if(count($formation->import())) {
+            if (count($formation->import())) {
                 Route::formation($class)
                     ->resource((string) $formation->guessResourceName())
                     ->asImport();
