@@ -5,13 +5,10 @@ namespace App\Http\Cards;
 use App\Models\User;
 use HeadlessLaravel\Cards\Card;
 use HeadlessLaravel\Cards\Cards;
-use HeadlessLaravel\Metrics\Metric;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
 
 class Dashboard extends Cards
 {
@@ -22,18 +19,18 @@ class Dashboard extends Cards
         ];
     }
 
-    public function cards():array
+    public function cards(): array
     {
         return [
             Card::make('Welcome')
                 ->span(4)
                 ->value(function () {
-                    return 'Welcome back, ' . Auth::user()->name;
+                    return 'Welcome back, '.Auth::user()->name;
                 }),
 
             Card::make('Environment')
                 ->span(5)
-                ->value(function() {
+                ->value(function () {
                     return App::environment();
                 }),
 
@@ -45,19 +42,19 @@ class Dashboard extends Cards
 
             Card::make('Artisan Inspire')
                 ->span(6)
-                ->value(function() {
+                ->value(function () {
                     return Inspiring::quote();
                 }),
 
             Card::make('Today\'s Date')
                 ->span(3)
-                ->value(function() {
+                ->value(function () {
                     return Carbon::today()->format('m/d/Y');
                 }),
 
             Card::make('Current Time')
                 ->span(3)
-                ->value(function() {
+                ->value(function () {
                     return Carbon::now()->format('h:ma');
                 }),
         ];
