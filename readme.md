@@ -8,7 +8,7 @@ php artisan headless:install
 ```
 and just add 1 route to web.php to get started
 ```php
-Route::headless();
+Headless::routes();
 ```
 
 [Read the documentation](https://github.com/headlesslaravel/docs)

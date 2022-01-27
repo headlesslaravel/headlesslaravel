@@ -13,7 +13,7 @@ class Manager
 
     public $cards = [];
 
-    public function searchable(): array
+    public function searchables(): array
     {
         if (count($this->searchable)) {
             return $this->searchable;
@@ -57,22 +57,6 @@ class Manager
         return $this->formations;
     }
 
-    public function routeFormations()
-    {
-        foreach ($this->formations() as $class) {
-            $formation = app($class);
-
-            Route::formation($class)
-                ->resource((string) $formation->guessResourceName());
-
-            if (count($formation->import())) {
-                Route::formation($class)
-                    ->resource((string) $formation->guessResourceName())
-                    ->asImport();
-            }
-        }
-    }
-
     public function cards(): array
     {
         if (count($this->cards)) {
@@ -90,21 +74,38 @@ class Manager
         return $this->cards;
     }
 
-    public function routeCards()
+    public function formationRoutes()
+    {
+        foreach ($this->formations() as $class) {
+
+            $formation = app($class);
+
+            Route::formation($class)
+                ->resource((string) $formation->guessResourceName());
+
+            if(count($formation->import())) {
+                Route::formation($class)
+                    ->resource((string) $formation->guessResourceName())
+                    ->asImport();
+            }
+        }
+    }
+
+    public function cardRoutes()
     {
         foreach ($this->cards() as $class) {
             Route::cards($class);
         }
     }
 
-    public function routeNotifications()
+    public function notificationRoutes()
     {
         Route::notifications();
     }
 
-    public function routeSearchable()
+    public function searchRoutes()
     {
-        $searchable = $this->searchable();
+        $searchable = $this->searchables();
 
         if (count($searchable)) {
             Route::seeker($searchable);
@@ -127,16 +128,11 @@ class Manager
         return $classes;
     }
 
-    public function route()
+    public function routes()
     {
-        $this->routeFormations();
-
-        $this->routeSearchable();
-
-        $this->routeCards();
-
-        if (Route::hasMacro('notifications')) {
-            $this->routeNotifications();
-        }
+        $this->formationRoutes();
+        $this->searchRoutes();
+        $this->cardRoutes();
+        $this->notificationRoutes();
     }
 }

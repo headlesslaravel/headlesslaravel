@@ -38,9 +38,5 @@ class PackageServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../resources/js' => resource_path('js'),
         ], 'craniums-vue');
-
-        Route::macro('headless', function () {
-            return app(Manager::class)->route();
-        });
     }
 }
