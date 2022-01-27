@@ -41,7 +41,7 @@ class UserFormation extends Formation
      *
      * @return array
      */
-    public function fields():array
+    public function fields(): array
     {
         return [
             Field::make('id'),
@@ -57,7 +57,7 @@ class UserFormation extends Formation
      *
      * @return array
      */
-    public function filters():array
+    public function filters(): array
     {
         return [
             //
