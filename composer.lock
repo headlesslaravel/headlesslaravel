@@ -692,16 +692,16 @@
         },
         {
             "name": "headlesslaravel/cards",
-            "version": "0.0.2",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/headlesslaravel/cards.git",
-                "reference": "5ab8409de72c335fb7c1a6e3f29f8016680dcebb"
+                "reference": "72bbad8f940176149c8d708293b6d58ec2dc664b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/headlesslaravel/cards/zipball/5ab8409de72c335fb7c1a6e3f29f8016680dcebb",
-                "reference": "5ab8409de72c335fb7c1a6e3f29f8016680dcebb",
+                "url": "https://api.github.com/repos/headlesslaravel/cards/zipball/72bbad8f940176149c8d708293b6d58ec2dc664b",
+                "reference": "72bbad8f940176149c8d708293b6d58ec2dc664b",
                 "shasum": ""
             },
             "require": {
@@ -752,7 +752,7 @@
             ],
             "support": {
                 "issues": "https://github.com/headlesslaravel/cards/issues",
-                "source": "https://github.com/headlesslaravel/cards/tree/0.0.2"
+                "source": "https://github.com/headlesslaravel/cards/tree/0.1.0"
             },
             "funding": [
                 {
@@ -760,20 +760,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-12-10T06:04:16+00:00"
+            "time": "2022-01-26T13:37:12+00:00"
         },
         {
             "name": "headlesslaravel/formations",
-            "version": "0.3.1",
+            "version": "0.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/headlesslaravel/formations.git",
-                "reference": "94e1ec3948c54c996e52493670867a7a2befc0ae"
+                "reference": "2a6c548d60fede81b1c23273b4d96b2865ad5e81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/headlesslaravel/formations/zipball/94e1ec3948c54c996e52493670867a7a2befc0ae",
-                "reference": "94e1ec3948c54c996e52493670867a7a2befc0ae",
+                "url": "https://api.github.com/repos/headlesslaravel/formations/zipball/2a6c548d60fede81b1c23273b4d96b2865ad5e81",
+                "reference": "2a6c548d60fede81b1c23273b4d96b2865ad5e81",
                 "shasum": ""
             },
             "require": {
@@ -809,9 +809,9 @@
             "description": "Laravel index filters & validation",
             "support": {
                 "issues": "https://github.com/headlesslaravel/formations/issues",
-                "source": "https://github.com/headlesslaravel/formations/tree/0.3.1"
+                "source": "https://github.com/headlesslaravel/formations/tree/0.3.2"
             },
-            "time": "2022-01-27T04:19:28+00:00"
+            "time": "2022-01-27T17:08:33+00:00"
         },
         {
             "name": "headlesslaravel/metrics",

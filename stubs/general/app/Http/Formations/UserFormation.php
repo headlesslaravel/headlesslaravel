@@ -27,28 +27,41 @@ class UserFormation extends Formation
      *
      * @var array
      */
-    public $search = ['name', 'email'];
+    public $search = ['id', 'name', 'email'];
 
     /**
      * The sortable columns.
      *
      * @var array
      */
-    public $sort = ['name', 'email', 'created_at'];
+    public $sort = ['id', 'name', 'email', 'created_at'];
 
     /**
-     * Define the fields.
+     * Define the index fields.
      *
      * @return array
      */
-    public function fields(): array
+    public function index(): array
     {
         return [
             Field::make('id'),
-            Field::make('name')->rules('required'),
-            Field::make('email')->rules('required'),
-            Field::make('password')->rules('required'),
+            Field::make('name'),
+            Field::make('email'),
             Field::make('created_at'),
+        ];
+    }
+
+    /**
+     * Define the form fields.
+     *
+     * @return array
+     */
+    public function form(): array
+    {
+        return [
+            Field::make('name')->rules('required|min:5'),
+            Field::make('email')->rules('required|email'),
+            Field::make('password')->rules('required|min:8'),
         ];
     }
 
@@ -60,7 +73,6 @@ class UserFormation extends Formation
     public function filters(): array
     {
         return [
-            //
             Filter::make('trash')->trash(),
         ];
     }
