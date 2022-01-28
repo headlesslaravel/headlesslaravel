@@ -35,7 +35,7 @@ class PackageServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if(class_exists(Inertia::class)) {
+        if (class_exists(Inertia::class)) {
             Inertia::share('dateIntervals', DateInterval::make());
         }
 
