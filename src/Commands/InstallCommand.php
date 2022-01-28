@@ -42,6 +42,10 @@ class InstallCommand extends Command
 
         $this->updateDatabaseSeeder();
 
+        // run NPM Install and NPM PROD
+        $this->runNPMInstall();
+        $this->runNPMProd();
+
         $this->warn('todo: php artisan migrate:fresh --seed');
         $this->info('user: admin@example.com pass: password');
 

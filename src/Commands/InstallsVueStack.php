@@ -24,10 +24,6 @@ trait InstallsVueStack
 
         // Update tailwind.config.js
         $this->updateTailwindConfig();
-
-        // run NPM Install and NPM PROD
-        $this->runNPMInstall();
-        $this->runNPMProd();
     }
 
     protected function updateAppJs()
