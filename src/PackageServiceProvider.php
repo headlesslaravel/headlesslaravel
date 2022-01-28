@@ -38,7 +38,7 @@ class PackageServiceProvider extends ServiceProvider
         Inertia::share('dateIntervals', DateInterval::make());
 
         $this->publishes([
-            __DIR__.'/../stubs/general' => base_path(),
+            __DIR__.'/../stubs/general'               => base_path(),
             __DIR__.'/../config/headless-laravel.php' => config_path('headless-laravel.php'),
         ], 'headless-setup');
 
