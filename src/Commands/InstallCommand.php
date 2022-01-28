@@ -34,6 +34,8 @@ class InstallCommand extends Command
         if ($this->argument('stack') == 'vue') {
             $this->installVueStack();
             $this->callSilent('vendor:publish', ['--tag' => 'craniums-vue', '--force' => true]);
+            $this->callSilent('vendor:publish', ['--tag' => 'headless-formations-config']);
+            $this->replaceLine("'mode' => 'blade',", "'mode' => 'inertia',", config_path('headless-formations.php'));
         }
 
         $this->callSilent('vendor:publish', ['--tag' => 'headless-setup', '--force' => true]);
