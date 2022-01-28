@@ -31,12 +31,12 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        $this->callSilent('vendor:publish', ['--tag' => 'headless-setup', '--force' => true]);
-
         if ($this->argument('stack') == 'vue') {
             $this->installVueStack();
             $this->callSilent('vendor:publish', ['--tag' => 'craniums-vue', '--force' => true]);
         }
+
+        $this->callSilent('vendor:publish', ['--tag' => 'headless-setup', '--force' => true]);
 
         $this->updateDatabaseSeeder();
 
