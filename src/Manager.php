@@ -87,6 +87,12 @@ class Manager
                     ->resource((string) $formation->guessResourceName())
                     ->asImport();
             }
+
+            if (count($formation->export())) {
+                Route::formation($class)
+                    ->resource((string) $formation->guessResourceName())
+                    ->asExport();
+            }
         }
     }
 
