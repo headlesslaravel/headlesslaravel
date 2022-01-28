@@ -35,7 +35,9 @@ class PackageServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Inertia::share('dateIntervals', DateInterval::make());
+        if(class_exists(Inertia::class)) {
+            Inertia::share('dateIntervals', DateInterval::make());
+        }
 
         $this->publishes([
             __DIR__.'/../stubs/general'               => base_path(),
