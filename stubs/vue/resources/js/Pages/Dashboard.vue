@@ -6,7 +6,7 @@
                     Dashboard
                 </template>
                 <template #aside>
-                    <RelativeDates />
+                    <DateInterval />
                 </template>
             </Heading>
         </template>
@@ -18,13 +18,13 @@
 
 <script>
 import Layout from '@/Layouts/Sidebar'
-import { Heading, Cards, RelativeDates } from "@craniums/vue";
+import { Heading, Cards, DateInterval } from "@craniums/vue";
 
 export default {
     components: {
         Layout,
         Heading,
-        RelativeDates,
+        DateInterval,
         Cards,
     },
 }

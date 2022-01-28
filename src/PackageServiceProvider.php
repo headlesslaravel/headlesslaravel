@@ -4,6 +4,7 @@ namespace HeadlessLaravel;
 
 use HeadlessLaravel\Commands\InstallCommand;
 use Illuminate\Support\ServiceProvider;
+use Inertia\Inertia;
 
 class PackageServiceProvider extends ServiceProvider
 {
@@ -34,6 +35,8 @@ class PackageServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Inertia::share('dateIntervals', DateInterval::make());
+
         $this->publishes([
             __DIR__.'/../stubs/general' => base_path(),
         ], 'headless-setup');

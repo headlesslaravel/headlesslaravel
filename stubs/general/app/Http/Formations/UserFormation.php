@@ -37,6 +37,18 @@ class UserFormation extends Formation
     public $sort = ['id', 'name', 'email', 'created_at'];
 
     /**
+     * Define the filters.
+     *
+     * @return array
+     */
+    public function filters(): array
+    {
+        return [
+            Filter::make('trash')->trash(),
+        ];
+    }
+
+    /**
      * Define the index fields.
      *
      * @return array
@@ -66,14 +78,32 @@ class UserFormation extends Formation
     }
 
     /**
-     * Define the filters.
+     * Define the importable columns.
      *
      * @return array
      */
-    public function filters(): array
+    public function import(): array
     {
         return [
-            Filter::make('trash')->trash(),
+            Field::make('id'),
+            Field::make('name'),
+            Field::make('email'),
+        ];
+    }
+
+    /**
+     * Define the exportable columns.
+     *
+     * @return array
+     */
+    public function export(): array
+    {
+        return [
+            Field::make('id'),
+            Field::make('name'),
+            Field::make('email'),
+            Field::make('created_at'),
+            Field::make('updated_at'),
         ];
     }
 }
