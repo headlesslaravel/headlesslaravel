@@ -16,7 +16,8 @@
         "headlesslaravel/metrics": "*",
         "illuminate/console": "*",
         "illuminate/support": "*",
-        "composer/composer": "^2.2"
+        "composer/composer": "^2.2",
+        "headlesslaravel/finders": "^0.0.1"
     },
     "autoload": {
         "psr-4": {
