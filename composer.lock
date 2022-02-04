@@ -821,19 +821,20 @@
         },
         {
             "name": "headlesslaravel/formations",
-            "version": "0.4.3",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/headlesslaravel/formations.git",
-                "reference": "9ecc6bdb79bc779bccd156a9b50b0fa8a23a8b1d"
+                "reference": "f35bac9e7a6c4d460e1263266b2326365f28d3ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/headlesslaravel/formations/zipball/9ecc6bdb79bc779bccd156a9b50b0fa8a23a8b1d",
-                "reference": "9ecc6bdb79bc779bccd156a9b50b0fa8a23a8b1d",
+                "url": "https://api.github.com/repos/headlesslaravel/formations/zipball/f35bac9e7a6c4d460e1263266b2326365f28d3ff",
+                "reference": "f35bac9e7a6c4d460e1263266b2326365f28d3ff",
                 "shasum": ""
             },
             "require": {
+                "headlesslaravel/finders": "*",
                 "maatwebsite/excel": "^3.1"
             },
             "require-dev": {
@@ -866,9 +867,9 @@
             "description": "Laravel index filters & validation",
             "support": {
                 "issues": "https://github.com/headlesslaravel/formations/issues",
-                "source": "https://github.com/headlesslaravel/formations/tree/0.4.3"
+                "source": "https://github.com/headlesslaravel/formations/tree/0.5.0"
             },
-            "time": "2022-01-28T19:54:19+00:00"
+            "time": "2022-02-04T04:11:34+00:00"
         },
         {
             "name": "headlesslaravel/metrics",
