@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5cab272c286af342926524afd6efd83a",
+    "content-hash": "b43c10a04725a433b51fac6d6c6ec3af",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -84,16 +84,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.2.5",
+            "version": "2.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "22c41ef275c7bb64fa28fb2c0871a39666832cb9"
+                "reference": "ce785a18c0fb472421e52d958bab339247cb0e82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/22c41ef275c7bb64fa28fb2c0871a39666832cb9",
-                "reference": "22c41ef275c7bb64fa28fb2c0871a39666832cb9",
+                "url": "https://api.github.com/repos/composer/composer/zipball/ce785a18c0fb472421e52d958bab339247cb0e82",
+                "reference": "ce785a18c0fb472421e52d958bab339247cb0e82",
                 "shasum": ""
             },
             "require": {
@@ -163,7 +163,7 @@
             "support": {
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
-                "source": "https://github.com/composer/composer/tree/2.2.5"
+                "source": "https://github.com/composer/composer/tree/2.2.6"
             },
             "funding": [
                 {
@@ -179,7 +179,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-21T16:25:52+00:00"
+            "time": "2022-02-04T16:00:38+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -323,16 +323,16 @@
         },
         {
             "name": "composer/semver",
-            "version": "3.2.8",
+            "version": "3.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/semver.git",
-                "reference": "3976a9e563da06e8dd8ca856fa2adcd66cdd98f3"
+                "reference": "a951f614bd64dcd26137bc9b7b2637ddcfc57649"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/3976a9e563da06e8dd8ca856fa2adcd66cdd98f3",
-                "reference": "3976a9e563da06e8dd8ca856fa2adcd66cdd98f3",
+                "url": "https://api.github.com/repos/composer/semver/zipball/a951f614bd64dcd26137bc9b7b2637ddcfc57649",
+                "reference": "a951f614bd64dcd26137bc9b7b2637ddcfc57649",
                 "shasum": ""
             },
             "require": {
@@ -384,7 +384,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/semver/issues",
-                "source": "https://github.com/composer/semver/tree/3.2.8"
+                "source": "https://github.com/composer/semver/tree/3.2.9"
             },
             "funding": [
                 {
@@ -400,7 +400,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-04T12:12:24+00:00"
+            "time": "2022-02-04T13:58:43+00:00"
         },
         {
             "name": "composer/spdx-licenses",
@@ -692,16 +692,16 @@
         },
         {
             "name": "headlesslaravel/cards",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/headlesslaravel/cards.git",
-                "reference": "72bbad8f940176149c8d708293b6d58ec2dc664b"
+                "reference": "01fb37e91bf462f02d5684117c40661b72644d07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/headlesslaravel/cards/zipball/72bbad8f940176149c8d708293b6d58ec2dc664b",
-                "reference": "72bbad8f940176149c8d708293b6d58ec2dc664b",
+                "url": "https://api.github.com/repos/headlesslaravel/cards/zipball/01fb37e91bf462f02d5684117c40661b72644d07",
+                "reference": "01fb37e91bf462f02d5684117c40661b72644d07",
                 "shasum": ""
             },
             "require": {
@@ -709,7 +709,6 @@
                 "php": "^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.1",
                 "nunomaduro/collision": "^5.3",
                 "nunomaduro/larastan": "^0.7.12",
                 "orchestra/testbench": "^6.15",
@@ -752,7 +751,7 @@
             ],
             "support": {
                 "issues": "https://github.com/headlesslaravel/cards/issues",
-                "source": "https://github.com/headlesslaravel/cards/tree/0.1.0"
+                "source": "https://github.com/headlesslaravel/cards/tree/0.2.0"
             },
             "funding": [
                 {
@@ -760,20 +759,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-26T13:37:12+00:00"
+            "time": "2022-02-07T03:35:18+00:00"
         },
         {
             "name": "headlesslaravel/finders",
-            "version": "0.0.1",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/headlesslaravel/finders.git",
-                "reference": "11ff4eb27c098cf32744b15852a7e1b7771a3e7f"
+                "reference": "26ced01460f2d108cf76c3c9694c8d8210adc954"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/headlesslaravel/finders/zipball/11ff4eb27c098cf32744b15852a7e1b7771a3e7f",
-                "reference": "11ff4eb27c098cf32744b15852a7e1b7771a3e7f",
+                "url": "https://api.github.com/repos/headlesslaravel/finders/zipball/26ced01460f2d108cf76c3c9694c8d8210adc954",
+                "reference": "26ced01460f2d108cf76c3c9694c8d8210adc954",
                 "shasum": ""
             },
             "require": {
@@ -815,22 +814,22 @@
             ],
             "support": {
                 "issues": "https://github.com/headlesslaravel/finders/issues",
-                "source": "https://github.com/headlesslaravel/finders/tree/0.0.1"
+                "source": "https://github.com/headlesslaravel/finders/tree/0.1.0"
             },
-            "time": "2022-02-04T00:04:21+00:00"
+            "time": "2022-02-07T02:39:27+00:00"
         },
         {
             "name": "headlesslaravel/formations",
-            "version": "0.5.0",
+            "version": "0.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/headlesslaravel/formations.git",
-                "reference": "f35bac9e7a6c4d460e1263266b2326365f28d3ff"
+                "reference": "a9d4007c2e2e3681e599bde5c0163704b2398be5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/headlesslaravel/formations/zipball/f35bac9e7a6c4d460e1263266b2326365f28d3ff",
-                "reference": "f35bac9e7a6c4d460e1263266b2326365f28d3ff",
+                "url": "https://api.github.com/repos/headlesslaravel/formations/zipball/a9d4007c2e2e3681e599bde5c0163704b2398be5",
+                "reference": "a9d4007c2e2e3681e599bde5c0163704b2398be5",
                 "shasum": ""
             },
             "require": {
@@ -867,9 +866,9 @@
             "description": "Laravel index filters & validation",
             "support": {
                 "issues": "https://github.com/headlesslaravel/formations/issues",
-                "source": "https://github.com/headlesslaravel/formations/tree/0.5.0"
+                "source": "https://github.com/headlesslaravel/formations/tree/0.5.3"
             },
-            "time": "2022-02-04T04:11:34+00:00"
+            "time": "2022-02-07T05:02:01+00:00"
         },
         {
             "name": "headlesslaravel/metrics",
@@ -2709,12 +2708,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2790,12 +2789,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -2954,12 +2953,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php73\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php73\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -3033,12 +3032,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php80\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php80\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
