@@ -29,11 +29,11 @@ trait InstallsVueStack
     protected function updateAppJs()
     {
         $addImportAfter = "import { InertiaProgress } from '@inertiajs/progress';";
-        $importCranium = "import Cranium from '@craniums/vue';";
+        $importCranium = "import Cranium from '@craniums/vue';".PHP_EOL."import Config from './config';";
         $this->addLineAfter($addImportAfter, $importCranium, resource_path('js/app.js'));
 
         $addUseAfter = '.use(plugin)';
-        $useCranium = '            .use(Cranium)';
+        $useCranium = '            .use(Cranium, Config)';
         $this->addLineAfter($addUseAfter, $useCranium, resource_path('js/app.js'));
     }
 
