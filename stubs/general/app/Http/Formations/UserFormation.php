@@ -2,7 +2,7 @@
 
 namespace App\Http\Formations;
 
-use HeadlessLaravel\Formations\Field;
+use HeadlessLaravel\Formations\Fields\Field;
 use HeadlessLaravel\Formations\Filter;
 use HeadlessLaravel\Formations\Formation;
 
