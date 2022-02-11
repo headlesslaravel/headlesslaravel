@@ -763,16 +763,16 @@
         },
         {
             "name": "headlesslaravel/finders",
-            "version": "0.1.0",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/headlesslaravel/finders.git",
-                "reference": "26ced01460f2d108cf76c3c9694c8d8210adc954"
+                "reference": "daafc30801bec25a92d539bbae03fa22d6abf222"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/headlesslaravel/finders/zipball/26ced01460f2d108cf76c3c9694c8d8210adc954",
-                "reference": "26ced01460f2d108cf76c3c9694c8d8210adc954",
+                "url": "https://api.github.com/repos/headlesslaravel/finders/zipball/daafc30801bec25a92d539bbae03fa22d6abf222",
+                "reference": "daafc30801bec25a92d539bbae03fa22d6abf222",
                 "shasum": ""
             },
             "require": {
@@ -814,22 +814,22 @@
             ],
             "support": {
                 "issues": "https://github.com/headlesslaravel/finders/issues",
-                "source": "https://github.com/headlesslaravel/finders/tree/0.1.0"
+                "source": "https://github.com/headlesslaravel/finders/tree/0.1.2"
             },
-            "time": "2022-02-07T02:39:27+00:00"
+            "time": "2022-02-11T19:39:46+00:00"
         },
         {
             "name": "headlesslaravel/formations",
-            "version": "0.5.3",
+            "version": "0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/headlesslaravel/formations.git",
-                "reference": "a9d4007c2e2e3681e599bde5c0163704b2398be5"
+                "reference": "0e26c8d952eb72c9be3c32127f9cb31aa878ef51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/headlesslaravel/formations/zipball/a9d4007c2e2e3681e599bde5c0163704b2398be5",
-                "reference": "a9d4007c2e2e3681e599bde5c0163704b2398be5",
+                "url": "https://api.github.com/repos/headlesslaravel/formations/zipball/0e26c8d952eb72c9be3c32127f9cb31aa878ef51",
+                "reference": "0e26c8d952eb72c9be3c32127f9cb31aa878ef51",
                 "shasum": ""
             },
             "require": {
@@ -866,9 +866,9 @@
             "description": "Laravel index filters & validation",
             "support": {
                 "issues": "https://github.com/headlesslaravel/formations/issues",
-                "source": "https://github.com/headlesslaravel/formations/tree/0.5.3"
+                "source": "https://github.com/headlesslaravel/formations/tree/0.6.0"
             },
-            "time": "2022-02-07T05:02:01+00:00"
+            "time": "2022-02-11T16:10:53+00:00"
         },
         {
             "name": "headlesslaravel/metrics",
@@ -975,7 +975,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v8.82.0",
+            "version": "v8.83.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -1029,7 +1029,7 @@
         },
         {
             "name": "illuminate/console",
-            "version": "v8.82.0",
+            "version": "v8.83.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
@@ -1089,7 +1089,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v8.82.0",
+            "version": "v8.83.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -1137,7 +1137,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v8.82.0",
+            "version": "v8.83.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -1183,16 +1183,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v8.82.0",
+            "version": "v8.83.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "910c5eb5d506013fdf60f9dc68c5512711857558"
+                "reference": "fe5469faa982e2dd8c2f5978b23cf881e3715d1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/910c5eb5d506013fdf60f9dc68c5512711857558",
-                "reference": "910c5eb5d506013fdf60f9dc68c5512711857558",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/fe5469faa982e2dd8c2f5978b23cf881e3715d1b",
+                "reference": "fe5469faa982e2dd8c2f5978b23cf881e3715d1b",
                 "shasum": ""
             },
             "require": {
@@ -1247,7 +1247,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-01-28T16:29:10+00:00"
+            "time": "2022-02-07T21:23:13+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -2146,23 +2146,23 @@
         },
         {
             "name": "react/promise",
-            "version": "v2.8.0",
+            "version": "v2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "f3cff96a19736714524ca0dd1d4130de73dbbbc4"
+                "reference": "234f8fd1023c9158e2314fa9d7d0e6a83db42910"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/f3cff96a19736714524ca0dd1d4130de73dbbbc4",
-                "reference": "f3cff96a19736714524ca0dd1d4130de73dbbbc4",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/234f8fd1023c9158e2314fa9d7d0e6a83db42910",
+                "reference": "234f8fd1023c9158e2314fa9d7d0e6a83db42910",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^7.0 || ^6.5 || ^5.7 || ^4.8.36"
+                "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8.36"
             },
             "type": "library",
             "autoload": {
@@ -2180,7 +2180,23 @@
             "authors": [
                 {
                     "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com"
+                    "email": "jsorgalla@gmail.com",
+                    "homepage": "https://sorgalla.com/"
+                },
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@clue.engineering",
+                    "homepage": "https://clue.engineering/"
+                },
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "reactphp@ceesjankiewiet.nl",
+                    "homepage": "https://wyrihaximus.net/"
+                },
+                {
+                    "name": "Chris Boden",
+                    "email": "cboden@gmail.com",
+                    "homepage": "https://cboden.dev/"
                 }
             ],
             "description": "A lightweight implementation of CommonJS Promises/A for PHP",
@@ -2190,9 +2206,19 @@
             ],
             "support": {
                 "issues": "https://github.com/reactphp/promise/issues",
-                "source": "https://github.com/reactphp/promise/tree/v2.8.0"
+                "source": "https://github.com/reactphp/promise/tree/v2.9.0"
             },
-            "time": "2020-05-12T15:16:56+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/WyriHaximus",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/clue",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-02-11T10:27:51+00:00"
         },
         {
             "name": "seld/jsonlint",
