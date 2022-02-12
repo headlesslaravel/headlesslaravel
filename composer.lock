@@ -692,16 +692,16 @@
         },
         {
             "name": "headlesslaravel/cards",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/headlesslaravel/cards.git",
-                "reference": "01fb37e91bf462f02d5684117c40661b72644d07"
+                "reference": "346cc58aab254336458185822b2179e82b9e9a22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/headlesslaravel/cards/zipball/01fb37e91bf462f02d5684117c40661b72644d07",
-                "reference": "01fb37e91bf462f02d5684117c40661b72644d07",
+                "url": "https://api.github.com/repos/headlesslaravel/cards/zipball/346cc58aab254336458185822b2179e82b9e9a22",
+                "reference": "346cc58aab254336458185822b2179e82b9e9a22",
                 "shasum": ""
             },
             "require": {
@@ -751,7 +751,7 @@
             ],
             "support": {
                 "issues": "https://github.com/headlesslaravel/cards/issues",
-                "source": "https://github.com/headlesslaravel/cards/tree/0.2.0"
+                "source": "https://github.com/headlesslaravel/cards/tree/0.3.0"
             },
             "funding": [
                 {
@@ -759,7 +759,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-07T03:35:18+00:00"
+            "time": "2022-02-12T22:08:15+00:00"
         },
         {
             "name": "headlesslaravel/finders",
@@ -2902,12 +2902,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
